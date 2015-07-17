@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+
+<?php
+	$title="Hoseki Team - Home";
+	$path="";
+?>
+
+<html>
+	<head>
+		<?php
+			include "header.php";
+		?>
+	</head>
+	
+	<body>
+		<div id="container">
+			<header id="header">
+				<a href="index.html"><img src="img/logo.png" alt="Hoseki Team Logo" title="Logo dell'Hoseki Team"></a>
+			</header>
+			
+			<nav id="nav">
+					<!-- Lista generale -->
+					<ul>
+						<!-- 1° Elemento: Home -->
+						<li class="nav_selected">
+							<a href="index.html">Home</a>
+						</li>
+						
+						<!-- 2° Elemento: Blog -->
+						<li>
+							<a href="blog/index.html">Blog</a>
+						</li>
+						
+						<!-- 2° Elemento: Contattaci -->
+						<li>
+							<a href="contatti.html">Contatti</a>
+						</li>
+
+						<!-- 3° Elemento: Hoseki Team -->
+						<li>
+							<a id="team">Team</a>
+							<ul>
+								<li>
+									<a href="team/team.html" onmouseover="setClass('team')" onmouseout="removeClass('team')">Chi  siamo</a>
+								</li>
+								<li>
+									<a href="team/members.html" onmouseover="setClass('team')" onmouseout="removeClass('team')">Membri</a>
+								</li>
+							</ul>
+						</li>
+						
+						<!-- 4° Elemento: Progetti -->
+						<li>
+							<a id="projects">Progetti</a>
+							<ul>
+								<li>
+									<a href="project/cremisi-portal.html" onmouseover="setClass('projects')" onmouseout="removeClass('projects')">Cremisi  Portals</a>
+								</li>
+								<li>
+									<a href="project/red-adventure.html" onmouseover="setClass('projects')" onmouseout="removeClass('projects')">Red  Adventure</a>
+								</li>
+								<li>
+									<a href="project/divine-bond.html" onmouseover="setClass('projects')" onmouseout="removeClass('projects')">Divine  Bond</a>
+								</li>
+								<li>
+									<a href="project/oxy.html" onmouseover="setClass('projects')" onmouseout="removeClass('projects')">Oxy</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+			
+				<a href="http://www.pokemonhacking.it" id="ph">PH.IT</a>
+			</nav>
+			
+			<section id="content">
+					<div class="block">
+						<a href="project/fantasy-legacy.html"><img class="img_preview" src="img/image.png" alt="Pokémon Cremisi Portals"><img class="img_preview" src="img/image.png" alt="Pokémon Cremisi Portals">
+						<h2>Pokémon Cremisi Portals</h2></a>
+						<p><b>Fondatore:</b> Bl00d-Kirito<br>
+						<b>Status</b> <span class="green">In sviluppo - Demo prevista per Giugno</span><br>
+						<b>Discussioni ufficiali:</b> <a href="http://www.pokemonhacking.it/showthread.php?tid=402">pokemonhacking.it</a></p>
+						<p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consectetur sed nisi et viverra. Praesent sed leo posuere, porttitor ex non, mattis quam. Nullam at lacinia dolor. Praesent quis facilisis urna. Sed pulvinar ornare lorem, quis dignissim nunc suscipit congue. Duis gravida lorem et enim mattis venenatis. Nulla in scelerisque quam. Vestibulum viverra quam quis lobortis lacinia. Mauris enim turpis, tincidunt et turpis id, fringilla consequat ex. Nullam ut est ac odio vehicula imperdiet. Quisque auctor imperdiet lorem id finibus. Etiam pharetra velit nec tempus ultricies. Sed pellentesque risus neque, et accumsan augue pharetra eu. Cras blandit a nisi ut lacinia. Curabitur commodo vitae eros eget aliquam.</p>
+					</div>
+					<div class="block">
+						<a href="project/red-adventure.html"><img class="img_preview" src="img/image.png" alt="Pokémon Red Adventure"><img class="img_preview" src="img/image.png" alt="Pokémon Red Adventure">
+						<h2>Pokémon Red Adventure</h2></a>
+						<p><b>Fondatore:</b> Spinda94<br>
+						<b>Status</b> <span class="blue">In sviluppo - Alfa disponibile</span><br>
+						<b>Discussioni ufficiali:</b> <a href="http://www.pokemonhacking.it/showthread.php?tid=674">pokemonhacking.it</a></p>
+						<p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consectetur sed nisi et viverra. Praesent sed leo posuere, porttitor ex non, mattis quam. Nullam at lacinia dolor. Praesent quis facilisis urna. Sed pulvinar ornare lorem, quis dignissim nunc suscipit congue. Duis gravida lorem et enim mattis venenatis. Nulla in scelerisque quam. Vestibulum viverra quam quis lobortis lacinia. Mauris enim turpis, tincidunt et turpis id, fringilla consequat ex. Nullam ut est ac odio vehicula imperdiet. Quisque auctor imperdiet lorem id finibus. Etiam pharetra velit nec tempus ultricies. Sed pellentesque risus neque, et accumsan augue pharetra eu. Cras blandit a nisi ut lacinia. Curabitur commodo vitae eros eget aliquam.</p>
+					</div>
+					<div class="block">
+						<a href="project/cremisi-portals.html"><img class="img_preview" src="img/image.png" alt="Pokémon Oxy"><img class="img_preview" src="img/image.png" alt="Pokémon Oxy">
+						<h2>Pokémon Oxy</h2></a>
+						<p><b>Fondatore:</b> Hydrogen<br>
+						<b>Status</b> <span class="green">In corso</span><br>
+						<b>Discussioni ufficiali:</b> <a href="http://www.pokemonhacking.it/showthread.php?tid=848">pokemonhacking.it</a></p>
+						<p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consectetur sed nisi et viverra. Praesent sed leo posuere, porttitor ex non, mattis quam. Nullam at lacinia dolor. Praesent quis facilisis urna. Sed pulvinar ornare lorem, quis dignissim nunc suscipit congue. Duis gravida lorem et enim mattis venenatis. Nulla in scelerisque quam. Vestibulum viverra quam quis lobortis lacinia. Mauris enim turpis, tincidunt et turpis id, fringilla consequat ex. Nullam ut est ac odio vehicula imperdiet. Quisque auctor imperdiet lorem id finibus. Etiam pharetra velit nec tempus ultricies. Sed pellentesque risus neque, et accumsan augue pharetra eu. Cras blandit a nisi ut lacinia. Curabitur commodo vitae eros eget aliquam.</p>
+					</div>
+					<div class="block">
+						<a href="project/opal.html"><img class="img_preview" src="img/image.png" alt="Pokémon Divine Bond"><img class="img_preview" src="img/image.png" alt="Pokémon Divine Bond">
+						<h2>Pokémon Divine Bond</h2></a>
+						<p><b>Fondatore:</b> LoCharmone<br>
+						<b>Status</b> <span class="green">In Corso</span><br>
+						<b>Discussioni ufficiali:</b> <a href="http://www.pokemonhacking.it/showthread.php?tid=391">pokemonhacking.it</a></p>
+						<p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consectetur sed nisi et viverra. Praesent sed leo posuere, porttitor ex non, mattis quam. Nullam at lacinia dolor. Praesent quis facilisis urna. Sed pulvinar ornare lorem, quis dignissim nunc suscipit congue. Duis gravida lorem et enim mattis venenatis. Nulla in scelerisque quam. Vestibulum viverra quam quis lobortis lacinia. Mauris enim turpis, tincidunt et turpis id, fringilla consequat ex. Nullam ut est ac odio vehicula imperdiet. Quisque auctor imperdiet lorem id finibus. Etiam pharetra velit nec tempus ultricies. Sed pellentesque risus neque, et accumsan augue pharetra eu. Cras blandit a nisi ut lacinia. Curabitur commodo vitae eros eget aliquam.</p>
+					</div>
+			</section>
+		</div>
+		
+		<footer id="footer">
+			<div id="footer_content">
+				<ul class="menu_left">
+				<li class= "f_header">Menù 1</li>
+					<li><a href="#">Link1</a></li>
+					<li><a href="#">Link1</a></li>
+					<li><a href="#">Link1</a></li>
+					<li><a href="#">Link1</a></li>
+					<li><a href="#">Link1</a></li>
+				</ul>
+				
+				
+				<ul class="menu_left">
+					<li class= "f_header">Menù 2</li>
+					<li><a href="#">Link1</a></li>
+					<li><a href="#">Link1</a></li>
+					<li><a href="#">Link1</a></li>
+					<li><a href="#">Link1</a></li>
+					<li><a href="#">Link1</a></li>
+				</ul>
+				
+				<img src="img/stamp_logo.png" alt="Trasparent Hoseki Team's Logo">
+				<ul class="menu_right">
+					<li class= "f_header">Menù 3</li>
+					<li><a href="#">Link1</a></li>
+					<li><a href="#">Link1</a></li>
+					<li><a href="#">Link1</a></li>
+					<li><a href="#">Link1</a></li>
+					<li><a href="#">Link1</a></li>
+				</ul>
+				
+				
+				<ul class="menu_right">
+					<li class= "f_header">Menù 4</li>
+					<li><a href="#">Link1</a></li>
+					<li><a href="#">Link1</a></li>
+					<li><a href="#">Link1</a></li>
+					<li><a href="#">Link1</a></li>
+					<li><a href="#">Link1</a></li>
+				</ul>
+			</div>
+			<div id="credits">Idea, Design and Base code by fuji97 - Complete Website by fuji97 & Bl00d-Kirito</div> 
+		</footer>
+	</body>
+</html>
