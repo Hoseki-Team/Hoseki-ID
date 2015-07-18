@@ -34,7 +34,7 @@
 					<a id="projects">Progetti</a>
 					<ul>
 						<li>
-							<a href="project/cremisi-portal.html" onmouseover="setClass('projects')" onmouseout="removeClass('projects')">Cremisi  Portals</a>
+							<a href="/project/cremisi-portal.html" onmouseover="setClass('projects')" onmouseout="removeClass('projects')">Cremisi  Portals</a>
 						</li>
 						<li>
 							<a href="project/red-adventure.html" onmouseover="setClass('projects')" onmouseout="removeClass('projects')">Red  Adventure</a>
@@ -54,7 +54,7 @@
 				<script language="javascript" charset="UTF-8">
 					$(document).ready(function(){
 					    $('#login-trigger').click(function() {
-					        $(this).next('#login-content').slideToggle();
+					        $(this).next('#login-content').toggle();
 					        $(this).toggleClass('nav_selected');                    
 					        
 					        })
@@ -63,14 +63,14 @@
 				<li id="login">
 					<a id="login-trigger" href="#">Entra</a>
 					<div id="login-content">
-						<form>
+						<form action="login.php" method="post">	<!-- TODO -->
 							<fieldset id="inputs">
 								<input id="username" type="text" name="username" placeholder="Username" required>   
 								<input id="password" type="password" name="password" placeholder="Password" required>
 							</fieldset>
 							<fieldset id="actions">
-								<input type="submit" class="waves-effect waves-light btn">
-								<label><input type="checkbox" checked="checked"> Rimani connesso</label>
+								<input type="submit" class="button">
+								<label><input type="checkbox" class="checkbox" checked="checked"><span class="standard">Rimani connesso</span></label>
 							</fieldset>
 						</form>
 					</div>                     
