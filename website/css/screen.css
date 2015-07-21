@@ -26,6 +26,17 @@ h1 {
 	margin: 5px;
 }
 
+td {
+	padding: 6px;
+	font-size: 18px;
+	color: #FFFFFF;
+	font-weight: bold;
+}
+
+table {
+	margin: 8px;
+}
+
 .standard {
 	font-family: robotoregular;
 	font-size: 13px;
@@ -234,9 +245,26 @@ input:focus {
   color: #212121;
 }
 
+.button-center {
+	background: ##efefef;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	-moz-box-shadow: 1px 2 2px rgba(0, 0, 0, 0.2);
+	-webkit-box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.2);
+	box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.2);   
+	float: center;
+	height: 25px;
+	padding: 0;
+	width: 100px;
+	cursor: pointer;
+	font: bold 14px robotoregular;
+	color: #212121;
+}
+
 .button:hover,
 .button:focus {        
-  background-color: #ffffff;
+  background: #ffffff;
 }    
 
 .button:active {        
@@ -265,15 +293,23 @@ input:focus {
   right: 2px;
 }
 
-.registration-status {
+#username-status, #password-status, #re-password-status, #email-status, #re-email-status {
 	border-radius: 4px;
-	background-color: #D32F2F;
+	background: #EFEFEF;
 	-moz-box-shadow: 1px 2 2px rgba(0, 0, 0, 0.2);
 	-webkit-box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.2);
 	box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.2);
 	display: none;
 	margin: 5px;
 	padding: 3px;
+}
+
+tr.space-row {
+	padding: 10px;
+}
+
+table.table-spaced tr {
+	padding: 12px;
 }
 
 #ph {
@@ -307,19 +343,49 @@ input:focus {
 	text-decoration: none;
 }
 
-.block {
+.block {	/* Deprecated */
 	display: inline-table;
 	margin: 20px;
 	padding: 15px;
 	border-radius: 3px;
 	max-width: 550px;
 	height: 430px;
-	background-color: #F44336;
+	background: #F44336;
 	box-shadow: 3px 6px 6px rgba(0, 0, 0, 0.2);
 	color: #212121;
 	font-size: 14px;
 	font-family: 'Helvetica', Verdana;
 	text-align: center;
+}
+
+.block-center {
+	display: inline-table;
+	margin: 20px;
+	padding: 15px;
+	border-radius: 3px;
+	max-width: 550px;
+	height: 430px;
+	background: #F44336;
+	box-shadow: 3px 6px 6px rgba(0, 0, 0, 0.2);
+	color: #212121;
+	font-size: 14px;
+	font-family: 'Helvetica', Verdana;
+	text-align: center;
+}
+
+.block-left {
+	display: inline-table;
+	margin: 20px;
+	padding: 15px;
+	border-radius: 3px;
+	max-width: 550px;
+	height: 430px;
+	background: #F44336;
+	box-shadow: 3px 6px 6px rgba(0, 0, 0, 0.2);
+	color: #212121;
+	font-size: 14px;
+	font-family: 'Helvetica', Verdana;
+	text-align: left;
 }
 
 .img_preview {

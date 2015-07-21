@@ -77,7 +77,7 @@
         		</li>
 
 				<li id="signup">
-					<a href="#">Registrati</a>
+					<a href="<?= $path ?>/signup.php">Registrati</a>
 				</li>
 				<?php else: ?>
 				<li>
