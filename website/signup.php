@@ -20,34 +20,36 @@
 						
 						<form action="signup.php" method="post">
 							<table class="table-spaced">
-								<tr>
-									<td colspan="2">
+								<tr class="bottom-aligned">
+									<td>
 										<label for="username">Username:</label><br>
-										<input id="username-new" type="text" name="username" required>
+										<input type="text" name="username" id="txt-username">
+									</td>
+									<td>
 										<div id="username-status"></div>
 									</td>
 								</tr>
-								<tr>
+								<tr class="top-aligned">
 									<td>
 										<label for="password">Password:</label><br>
-										<input id="password" type="password" name="password" require>
+										<input type="password" name="password" id="txt-password">
 										<div id="password-status"></div>
 									</td>
 									<td>
 										<label for="re-password">Reinserisci la Password:</label><br>
-										<input type="password" name="re-password" autocomplete="off"><br>
+										<input type="password" name="re-password" id="txt-re-password" autocomplete="off"><br>
 										<div id="re-password-status"></div>
 									</td>
 								</tr>
-								<tr>
+								<tr class="top-aligned">
 									<td>
 										<label for="email">Email:</label><br>
-										<input type="email" name="email" required><br>
+										<input type="email" name="email" id="txt-email"><br>
 										<div id="email-status"></div>
 									</td>
 									<td>
 										<label for="re-email">Reinserisci l'Email:</label><br>
-										<input type="email" name="re-email" autocomplete="off" require><br>
+										<input type="email" name="re-email" id="txt-re-email" autocomplete="off"><br>
 										<div id="re-email-status"></div>
 									</td>
 								</tr>
