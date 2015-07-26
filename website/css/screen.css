@@ -305,6 +305,12 @@ input:focus {
 	padding: 5px;
 }
 
+/* Plugin useless text starts */
+#txt-email-error, #txt-re-email-error  {
+	display: none !important;
+}
+/* Plugin useless text ends */
+
 tr.space-row {
 	padding: 10px;
 }

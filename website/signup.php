@@ -9,7 +9,8 @@
 <html>
 	<head>
 <?php include "include/header.php"; ?>
-		<script src="js/form-check.js" type="text/javascript" language="javascript"></script>
+		<script src="js/form-check.js"></script>
+		<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.min.js"></script>
 	</head>
 	<body>
 		<div id="container">		
@@ -18,7 +19,7 @@
 					<div class="block-center">
 						<h1>Registrati</h1>
 						
-						<form action="signup.php" method="post">
+						<form id="signup-form" action="signup.php" method="post">
 							<table class="table-spaced">
 								<tr class="bottom-aligned">
 									<td>
@@ -54,7 +55,7 @@
 									</td>
 								</tr>
 							</table>
-							<input class="button-center" type="submit">
+							<input class="button-center" type="submit" onSubmit="return submit_form()">
 						</form>
 					</div>
 			</section>
