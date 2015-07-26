@@ -19,7 +19,7 @@
 					<div class="block-center">
 						<h1>Registrati</h1>
 						
-						<form id="signup-form" action="signup.php" method="post">
+						<form id="signup-form" action="action/signup.php" method="post" onSubmit="return submit_form()">
 							<table class="table-spaced">
 								<tr class="bottom-aligned">
 									<td>
@@ -55,7 +55,7 @@
 									</td>
 								</tr>
 							</table>
-							<input class="button-center" type="submit" onSubmit="return submit_form()">
+							<input class="button-center" type="submit">
 						</form>
 					</div>
 			</section>

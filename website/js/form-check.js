@@ -31,17 +31,28 @@ $(document).ready(function() {
 
 function check_username() {
 	//run the character number check
+	$('#username-status').css("color","#FFFFFF");
 	if($('#txt-username').val().length < user_min_chars){  
 		//if it's bellow the minimum show characters_error text '  
 		$('#username-status').html(characters_error + user_min_chars);  
 		$('#username-status').css("background-color","#D32F2F");
 		ret = false;
-	} else {  
-		//else show the cheking_text and run the function to check  
-		$('#username-status').html(checking_html);  
-		ret = check_username_availability();  
+	} else {
+		var regCheck = new RegExp("[a-zA-Z0-9_\-~!\?\*]$");
+		if (!regCheck.test($('#txt-username').val())) {
+			$('#username-status').html("Puoi utilizzare lettere, numeri e i carrateri speciali: _ - ~ ! ? *");
+			$('#username-status').css("background-color","#D32F2F");
+			ret = false;
+		} else {
+		//else show the cheking_text and run the function to check
+		$('#username-status').css("color","#212121");
+		$('#username-status').css("background-color","#EFEFEF");
+		$('#username-status').html(checking_html);
+		ret = check_username_availability();
+		}
 	}
 	$('#username-status').fadeIn("400");
+	return ret;
 }
 
 function check_password() {
@@ -58,6 +69,7 @@ function check_password() {
 		ret = true;
 	}
 	$('#password-status').fadeIn("400");
+	return ret;
 }
 
 function check_re_password() {
@@ -74,6 +86,7 @@ function check_re_password() {
 		ret = true;
 	}
 	$('#re-password-status').fadeIn("400");
+	return ret;
 }
 
 function check_email() {
@@ -91,6 +104,7 @@ function check_email() {
 		ret = true;
 	}
 	$('#email-status').fadeIn("400");
+	return ret;
 }
 
 function check_re_email() {
@@ -107,6 +121,7 @@ function check_re_email() {
 		ret = true;
 	}
 	$('#re-email-status').fadeIn("400");
+	return ret;
 }
 	
 
@@ -115,23 +130,28 @@ function check_username_availability(){
 
 	//get the username
 	var username = $('#txt-username').val();  
-	ret = false;
+	var ret_username = true;
 	//use ajax to run the check  
-	$.post("include/check_exist.php", { username: username, type: "username" }, function(result) {  
+	$.post("action/check_exist.php", { val: username, type: "username" }, function(result) {
+		$('#username-status').css("color","#FFFFFF");
 		//if the result is 1  
 		if(result == 1){  
 			//show that the username is available  
 			$('#username-status').html(username + ' è disponibile');
 			$('#username-status').css("background-color","#4CAF50");
-			ret = true;
-		}else{  
+			ret_username = true;
+		} else if (result == 0){  
 			//show that the username is NOT available  
 			$('#username-status').html(username + ' non è disponibile');
 			$('#username-status').css("background-color","#D32F2F");
-			ret = false;
-		}  
+			ret_username = false;
+		} else {
+			$('#username-status').html(result);
+			$('#username-status').css("background-color","#D32F2F");
+			ret_username = false;
+		}
 	}); 
-	return ret;
+	return ret_username;
 }
 
 // Check if all fields are valid
