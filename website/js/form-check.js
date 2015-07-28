@@ -48,7 +48,7 @@ function check_username() {
 		$('#username-status').css("color","#212121");
 		$('#username-status').css("background-color","#EFEFEF");
 		$('#username-status').html(checking_html);
-		ret = check_username_availability();
+		ret = true;
 		}
 	}
 	$('#username-status').fadeIn("400");
@@ -91,6 +91,7 @@ function check_re_password() {
 
 function check_email() {
 	//run the character number check
+	$('#email-status').css("color","#FFFFFF");
 	$("#signup-form").validate();
 	if(!$("#txt-email").valid()) {
 		//if it's bellow the minimum show characters_error text '
@@ -99,8 +100,9 @@ function check_email() {
 		ret = false;
 	} else {
 		//ok
-		$('#email-status').css("background-color","#4CAF50");
-		$('#email-status').html('Email valida');
+		$('#email-status').css("color","#212121");
+		$('#email-status').css("background-color","#EFEFEF");
+		$('#email-status').html(checking_html);
 		ret = true;
 	}
 	$('#email-status').fadeIn("400");
@@ -127,7 +129,6 @@ function check_re_email() {
 
 //function to check username availability  
 function check_username_availability(){  
-
 	//get the username
 	var username = $('#txt-username').val();  
 	var ret_username = true;
@@ -154,10 +155,40 @@ function check_username_availability(){
 	return ret_username;
 }
 
+//function to check email availability  
+function check_email_availability(){  
+
+	//get the username
+	var email = $('#txt-email').val();
+	var ret_email = true;
+	//use ajax to run the check
+	$.post("action/check_exist.php", { val: email, type: "email" }, function(result) {
+		$('#email-status').css("color","#FFFFFF");
+		//if the result is 1  
+		if(result == 1){  
+			//show that the username is available  
+			$('#email-status').html(email + ' è disponibile');
+			$('#email-status').css("background-color","#4CAF50");
+			ret_email = true;
+		} else if (result == 0){  
+			//show that the username is NOT available  
+			$('#email-status').html(email + ' non è disponibile');
+			$('#email-status').css("background-color","#D32F2F");
+			ret_email = false;
+		} else {
+			$('#email-status').html(result);
+			$('#email-status').css("background-color","#D32F2F");
+			ret_email = false;
+		}
+	}); 
+	return ret_email;
+}
+
+
+
 // Check if all fields are valid
 function submit_form() {
-	if(check_username() && check_password() && check_re_password() && check_email() && check_re_password()) {
-		console.log("true");
+	if(check_password() && check_re_password() && check_re_email()) {
 		return true;
 	} else {
 		console.log("false");

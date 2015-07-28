@@ -18,7 +18,9 @@
 		
 		if(!$query = $mysqli->query("SELECT username FROM users WHERE username = '$val'")) {
 			echo "Query error: " . $mysqli->error;
+			$err = $mysqli->error;
 			$mysqli->close();
+			die($err);
 		}
 		if ($query->num_rows == 0) {
 			echo "1";
@@ -27,8 +29,10 @@
 		}
 		break;
 	case "email":
-		if(!$query = $mysqli->query("SELECT email FROM 'users' WHERE 'email' = '$val'")) {
+		if(!$query = $mysqli->query("SELECT email FROM users WHERE email = '$val'")) {
+			$err = $mysqli->error;
 			$mysqli->close();
+			die($err);
 		}
 		if ($query->num_rows == 0) {
 			echo "1";
@@ -36,6 +40,8 @@
 			echo "0";
 		}
 		break;
+	default:
+		echo "Nothing";
 	}
 	$mysqli->close();
 ?>
