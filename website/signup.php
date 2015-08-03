@@ -94,7 +94,7 @@
 						<?php if(!empty($form_error) && !$logged) {
 							echo '<div class="error-status">' . $form_error . '</div>';
 						} ?>
-						<?php if(!$logged): ?>
+						<?php if(!$logged && !$registration): ?>
 							<form id="signup-form" action="signup.php" method="post" onSubmit="return submit_form()">
 								<table class="table-spaced">
 									<tr class="bottom-aligned">
@@ -133,8 +133,12 @@
 								</table>
 								<input class="button-center" type="submit">
 							</form>
-						<?php else: ?>
+						<?php else if($logged): ?>
 							<h1>Sei già autenticato<br>Piccolo hacker in erba :)</h1>
+						<?php else if($registration): ?>
+							<h3>Registrazione effettuata!<br>Ti verrà inviata un email con un link di conferma<br>Controlla la tua casella di posta elettronica il prima possibile</h3>
+						<?php else: ?>
+							<h2>Errore sconosciuto, contattare gli amministratori del sistema</h2>
 						<?php endif ?>
 					</div>
 			</section>
